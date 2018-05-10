@@ -1,7 +1,4 @@
-{if(!isPlayer _x) then {deleteVehicle _x}} foreach allUnits; // DON'T RELEASE
-
 /*           RULES            */
-    
     enableSaving [false, false];
     tawvd_disablenone = true;
 
@@ -43,17 +40,12 @@
 
     ACE_maxWeightCarry = 7500;
     ACE_maxWeightDrag = 10000;
-    
-/*           TFAR            */
-    
-    tf_no_auto_long_range_radio                 = true;
-    TF_give_personal_radio_to_regular_soldier   = true;
-    TF_give_microdagr_to_soldier                = false;
-    TF_defaultWestPersonalRadio                 = "tf_rf7800str";
-    TF_defaultWestRiflemanRadio                 = "tf_anprc152";
-    TF_defaultWestBackpack                      = "tf_rt1523g_big_rhs";
-    
-    TF_terrain_interception_coefficient         = 7.0; //Coefficient defining the level of radio signal interruption caused by terrain.
+
+/*           DEBUG              */
+    if (getNumber (missionConfigFile >> "CfgSettings" >> "isDebugMode") == 1) then {
+        ["DEBUG MODE IS ACTIVE!", "WARNING", [true, false, true]] call CBA_fnc_debug;
+        logEntities;
+    };
     
 /*           MODULES            */
 

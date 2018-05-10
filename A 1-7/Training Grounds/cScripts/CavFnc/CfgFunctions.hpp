@@ -4,18 +4,19 @@ class cScripts {
         class initSupply {};
         class initVehicle {};
         class initHelo {};
+
         class initDocuments {};
+
         class initMissionStartHint {};
         class initTrainingStartHint {};
         class initCustomStartHint {};
 
         class initModules {};
 
-        class initCuratorHeloFRIES {};
         class initCuratorHeloGetOutRL {};
     };
     class DiaryRecord {
-        file = "cScripts\cavFnc\functions\init\DiaryRecord";
+        file = "cScripts\cavFnc\functions\documents";
         class Doc_Info {};
         class Doc_MissionControl {};
 
@@ -23,16 +24,17 @@ class cScripts {
         class DocRadio_MEDEVAC {};
         class DocRadio_ROTARYPICKUP {};
         class DocRadio_SPOTREP {};
+        class DocRadio_JMTASKS {};
+        class DocRadio_CFF {};
+        class DocRadio_LZSPECS {};
+        class DocRadio_LZINSERT {};
+        class DocRadio_LZEXTRACT {};
     };
-
-    class main {
-        file = "cScripts\cavFnc\functions\main";
+    class logistics {
+        file = "cScripts\cavFnc\functions\logistics";
         class doStarterCrate {};
         class doStarterCrateSupplies {};
-    };
 
-    class supplies {
-        file = "cScripts\cavFnc\functions\supplies";
         class doSupplyCrate {};
 
         class doAmmoCrate {};
@@ -42,10 +44,23 @@ class cScripts {
         class doMedicalCrate {};
         class doSpecialWeaponsCrate {};
         class doWeaponsCrate {};
-    };
 
+        class doEmptyCrate {};
+    };
     class systems {
         file = "cScripts\cavFnc\functions\systems";
+        class setPlayerInitSettings {};
+        class setPreInitPlayerSettings {};
+        class setPostInitPlayerSettings {};
+
+        class setCavVehicle {};
+        class setVehicleInventory {};
+        class setVehicleSettings {};
+
+        class addQuickSelection {};
+        class addInsigniaSelection {};
+
+        // Buttons and options
         class addReGear {};
         class addHeal {};
         class addArsenal {};
@@ -54,29 +69,52 @@ class cScripts {
         class addGetOutHelo {};
         class doGetOutHeloLeft {};
         class doGetOutHeloRight {};
+
         class addJump {};
         class doJump {};
+
+        class hasPlatoonVariable {};
+        class canSelectLoadout {};
+        class canNotSelectLoadout {};
     };
     class selections {
         file = "cScripts\cavFnc\functions\selections";
         class initQuickSelections {};
-        class addQuickSelection {};
         class initInsigniaSelections {};
-        class addInsigniaSelection {};
     };
 
     class misc {
-        file = "cScripts\cavFnc\functions\misc";
-        class attachVehicleLabel {};
-        class UH60TailNumber {}; //will be merged with "attachVehicleLabel"
+        file = "cScripts\cavFnc\functions\texture";
         class flag {};
+
+        class setVehicleLable {};
+        class createVehicleLable {};
+        class getVehicleLable {};
     };
     class modules {
         file = "cScripts\cavFnc\functions\modules";
         class moduleCreateStarterCrate {};
-        //class moduleApplySupply {};
+        class moduelCreateSupplyCrate {};
+        class moduelCreateSpecialWeaponsCrate {};
+
         class moduleApplyTailNumber {};
         class moduleReadyHelicopter {};
         class moduleApplyFlag {};
+        class moduleMakeDoctor {};
+        class moduleMakeEngineer {};
+    };
+    class debug {
+        file = "cScripts\cavFnc\functions\debug";
+        class logError {};
+        class logInfo {}; //will be merged with "attachVehicleLabel"
+        class logWarning {};
+    };
+
+
+    
+    class deprecated {
+        file = "cScripts\cavFnc\functions\deprecated";
+        class attachVehicleLabel {};    // replaced with setVehicleLable
+        class UH60TailNumber {};        // replaced with setVehicleLable
     };
 };

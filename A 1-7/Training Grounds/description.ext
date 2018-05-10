@@ -5,18 +5,19 @@
 
     onLoadName          = "A/1-7 Training Grounds";
     onLoadMission       = "Full feature map created for Alpha Company section practices.";
-    onLoadIntro         = "A/1-7 Training Grounds (v12)";
+    onLoadIntro         = "A/1-7 Training Grounds (v2.0)";
 
-	briefingName 		= "A/1-7 Training Grounds (v12)";
+	briefingName 		= "A/1-7 Training Grounds (v2.0)";
 	overviewText 		= "Full feature map created for Alpha Company section practices.";
 	loadScreen          = "splash.jpg";
 
 /*           RULES            */
 
+    cba_settings_hasSettingsFile = 1;
     disabledAI              = true;
     disableChannels[]       = {{0,false,true},{1,false,true},{2,true,true}};
-    forceRotorLibSimulation = 1;
-	enableDebugConsole 		= 1;
+
+    forceRotorLibSimulation = 0;
 
 /*          RESPAWN           */
 
@@ -33,7 +34,7 @@
 	{
 		gameType = Coop;
 		minPlayers = 1;
-		maxPlayers = 86;
+		maxPlayers = 100;
 	};
 	
     #include "CfgSettings.hpp"
@@ -55,7 +56,6 @@
     #include "cScripts\ViewingDistance\GUI.h"
     #include "cScripts\CfgUnitInsignia.hpp"
     #include "cScripts\CfgLoadouts.hpp"
-    #include "cScripts\CfgACESettings.hpp"
 	
 	class CfgRemoteExec
 	{        
