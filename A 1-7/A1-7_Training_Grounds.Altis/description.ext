@@ -1,7 +1,7 @@
 /*           INFO            */
 
-    dev                 = "Raynor.D";
-    author              = "Raynor.D";
+    dev                 = "Raynor.D & Blackburn.J";
+    author              = "Raynor.D & Blackburn.J";
 
     onLoadName          = "A/1-7 Training Grounds";
     onLoadMission       = "Full feature map created for Alpha Company section practices.";
