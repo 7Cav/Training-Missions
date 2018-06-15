@@ -8,7 +8,7 @@ class EditorData
 	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=7619;
+		nextID=7620;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14881.032,36.189922,16705.727};
+		pos[]={14758.21,100.69505,16770.461};
 		dir[]={-0.84384555,-0.5358144,-0.030582387};
 		up[]={-0.53550422,0.84430653,-0.019407196};
 		aside[]={-0.036221195,7.2526745e-008,0.99939221};
@@ -71300,7 +71300,7 @@ class Mission
 					};
 					id=7442;
 					type="rhsusf_navy_marpat_wd_medic";
-					atlOffset=0.0087738037;
+					atlOffset=0.0087757111;
 					class CustomAttributes
 					{
 						class Attribute0
