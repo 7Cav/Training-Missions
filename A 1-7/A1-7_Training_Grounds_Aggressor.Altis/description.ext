@@ -1,0 +1,73 @@
+/*           INFO            */
+
+    dev                 = "Raynor.D & Blackburn.J";
+    author              = "Raynor.D & Blackburn.J";
+
+    onLoadName          = "A/1-7 Stomping Grounds";
+    onLoadMission       = "Unleash hell on the other teams!";
+    onLoadIntro         = "A/1-7 Stomping Grounds <AGGRESSOR> (v2.0)";
+
+	briefingName 		= "A/1-7 Stomping Grounds <AGGRESSOR> (v2.0)";
+	overviewText 		= "Full feature map created for Alpha Company section practices.";
+	loadScreen          = "splash.jpg";
+
+/*           RULES            */
+
+    cba_settings_hasSettingsFile = 1;
+    disabledAI              = true;
+    disableChannels[]       = {{0,false,true},{1,false,true},{2,true,true}};
+
+    forceRotorLibSimulation = 0;
+
+/*          RESPAWN           */
+
+    respawn         		= BASE;
+    respawnDelay    		= 4;	
+	respawnOnStart			= -1;
+	respawnTemplatesWest[]	= {"MenuPosition"};
+
+/*          SYSTEMS           */
+	
+	
+
+	class Header
+	{
+		gameType = Coop;
+		minPlayers = 1;
+		maxPlayers = 100;
+	};
+	
+    #include "CfgSettings.hpp"
+    class Extended_PreInit_EventHandlers {
+        cScripts_preInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_preInit.sqf'";
+    };
+    class Extended_PostInit_EventHandlers {
+        cScripts_postInit = "0 spawn compile preprocessFileLineNumbers 'cScripts\CavFnc\cScripts_postInit.sqf'";
+    };
+    class CfgFunctions {
+        #include "cScripts\CavFnc\CfgFunctions.hpp"
+        #include "cScripts\Loadouts\script\CfgFunctions.hpp"
+        #include "cScripts\ViewingDistance\CfgFunctions.hpp"
+		
+		#include "RaynorsTeleporter\cfgFunctions.hpp"
+		#include "RaynorsVehicleSpawn\cfgFunctions.hpp"
+    };
+    #include "cScripts\Loadouts\script\CfgPoppy.hpp"
+    #include "cScripts\ViewingDistance\GUI.h"
+    #include "cScripts\CfgUnitInsignia.hpp"
+    #include "cScripts\CfgLoadouts.hpp"
+	
+	class CfgRemoteExec
+	{        
+		class Functions
+		{
+			mode = 2;
+			jip = 1;
+
+			class RAY_VS_fnc_addeditable {
+				allowedTargets=2; 
+			};
+		};        
+	};
+
+/*           OTHER            */
