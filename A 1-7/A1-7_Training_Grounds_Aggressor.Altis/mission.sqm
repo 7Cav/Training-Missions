@@ -6042,7 +6042,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="A/1-7 Training Grounds (v12)";
+		briefingName="A/1-7 Training Grounds (v2)";
 		overviewText="Full feature map created for Alpha Company.";
 		resistanceWest=0;
 		startWeather=0.29999998;
